@@ -1,7 +1,9 @@
 import {select , isCancel} from "@clack/prompts"; // for creating interactive prompts in the terminal
 import chalk from "chalk"; // for styling the terminal output
 
-import figlet from "figlet"; // for creating ASCII art from text
+import figlet from "figlet";// for creating ASCII art from text
+
+import { runCliMode } from "../modes/cli"; // function to run the CLI mode
 
 const BANNER_FONT = "ANSI shadow"; // font style for the banner
 const SHADOW = chalk.hex('#5b4d9e');
@@ -52,6 +54,6 @@ export async function runWakeup() {
         await runCliMode()
     }
     else if(mode === "telegram"){
-        await runTelegramMode()
-    }
+    //     await runTelegramMode()
+     }
 }
